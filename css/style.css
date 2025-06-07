@@ -1,0 +1,26 @@
+/* body {
+  margin: 0;
+  background: black;
+}
+canvas {
+  display: block;
+  margin: auto;
+  background: black;
+} */
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  background: black;
+}
