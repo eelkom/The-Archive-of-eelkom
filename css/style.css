@@ -1,13 +1,3 @@
-/* body {
-  margin: 0;
-  background: black;
-}
-canvas {
-  display: block;
-  margin: auto;
-  background: black;
-} */
-
 html {
   width: 100%;
   height: 100%;
@@ -22,5 +12,5 @@ body {
 canvas {
   width: 100%;
   height: 100%;
-  background: black;
+  background: #333333;
 }
