@@ -110,10 +110,16 @@ export default function drawPrism(ctx, width, height, phase, progress) {
   }
 
   // 텍스트 "rchive"
-  ctx.font = "bold 97px sans-serif";
+  ctx.font = "700 97px sans-serif";
   ctx.textAlign = "left";
   ctx.fillStyle = "white";
   ctx.fillText("rchive", origin.x + ratio, origin.y + ratio + 11);
+
+  // 텍스트 "of eelkom"
+  ctx.font = "500 25px sans-serif";
+  ctx.textAlign = "left";
+  ctx.fillStyle = "white";
+  ctx.fillText("of eelkom", origin.x + ratio + 215, origin.y + ratio + 45);
 
   ctx.restore();
 }
