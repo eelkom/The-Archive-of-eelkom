@@ -8,24 +8,10 @@ export default function drawPrism(ctx, width, height, phase, progress) {
   ctx.translate(x, y);
   ctx.lineWidth = 3;
 
-  // 프리즘 삼각형 좌표
-  const p1 = { x: origin.x, y: origin.y - ratio };
-  const p2 = { x: origin.x - ratio, y: origin.y + ratio };
-  const p3 = { x: origin.x + ratio, y: origin.y + ratio };
-
-  // 프리즘 삼각형
-  ctx.beginPath();
-  ctx.moveTo(p1.x, p1.y);
-  ctx.lineTo(p2.x, p2.y);
-  ctx.lineTo(p3.x, p3.y);
-  ctx.closePath();
-  ctx.strokeStyle = "white";
-  ctx.stroke();
-
   // 입사광선
   if (phase === "incoming") {
     const start = { x: origin.x - 200, y: origin.y + ratio };
-    const end = { x: origin.x - ratio / 2, y: origin.y };
+    const end = { x: origin.x - ratio / 2 + 2, y: origin.y };
 
     const cur = {
       x: start.x + (end.x - start.x) * (phase === "incoming" ? progress : 1),
@@ -120,6 +106,20 @@ export default function drawPrism(ctx, width, height, phase, progress) {
   ctx.textAlign = "left";
   ctx.fillStyle = "white";
   ctx.fillText("of eelkom", origin.x + ratio + 215, origin.y + ratio + 45);
+
+  // 프리즘 삼각형 좌표
+  const p1 = { x: origin.x, y: origin.y - ratio };
+  const p2 = { x: origin.x - ratio, y: origin.y + ratio };
+  const p3 = { x: origin.x + ratio, y: origin.y + ratio };
+
+  // 프리즘 삼각형
+  ctx.beginPath();
+  ctx.moveTo(p1.x, p1.y);
+  ctx.lineTo(p2.x, p2.y);
+  ctx.lineTo(p3.x, p3.y);
+  ctx.closePath();
+  ctx.strokeStyle = "white";
+  ctx.stroke();
 
   ctx.restore();
 }
