@@ -11,6 +11,6 @@ picker.addEventListener("scroll", () => {
     const itemCenter = rect.top + rect.height / 2;
     const distance = Math.abs(pickerCenter - itemCenter);
 
-    item.classList.toggle("active", distance < 40);
+    item.classList.toggle("active", distance < 30);
   });
 });
