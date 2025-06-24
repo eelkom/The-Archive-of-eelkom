@@ -14,7 +14,7 @@ let lastStartTime = null;
 
 function resize() {
   width = window.innerWidth;
-  height = window.innerHeight;
+  height = window.innerHeight * 0.6;
   pixelRatio = window.devicePixelRatio > 1 ? 2 : 1;
   canvas.width = width * pixelRatio;
   canvas.height = height * pixelRatio;

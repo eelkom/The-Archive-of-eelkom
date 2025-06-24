@@ -2,7 +2,7 @@ export default function drawPrism(ctx, width, height, phase, progress) {
   const x = width / 2;
   const y = height / 2;
   const ratio = 30 * 2;
-  const origin = { x: -110, y: 0 };
+  const origin = { x: -110, y: 100 };
 
   ctx.save();
   ctx.translate(x, y);
